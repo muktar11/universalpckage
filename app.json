@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "uniset",
+    "slug": "universal",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "This app needs access to your photo library to upload images.",
+        "NSCameraUsageDescription": "This app needs access to your camera to take photos."
+      },
+    "usesIcloudStorage": true,
+    "bundleIdentifier": "com.uniset.app"
+    },
+    "android": {
+      "permissions": [
+        "READ_EXTERNAL_STORAGE"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-video",
+       [
+        "expo-image-picker",
+        {
+          "photosPermission": "Select and upload images.",
+          "cameraPermission": "Allow the app to access your camera."
+        }
+      ],
+      ["expo-document-picker"]
+    ]
+  }
+}
